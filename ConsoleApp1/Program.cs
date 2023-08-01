@@ -1,21 +1,29 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Entre com um valor: ");
-double numero = Console.ReadLine();
-if (numero < 25.0)
+﻿using System;
 {
-    Console.WriteLine("O número digitado se encontra no intervalo de 0, 25");
-}
-else if (numero < 50.0)
-{
-    Console.WriteLine("O número digitado se encontra no intervalo de 25, 50");
-}
-else if (numero < 75.0)
-{
-    Console.WriteLine("O número digitado se encontra no intervalo de 25, 50");
-}
-else if (numero < 100.0)
-{
-    Console.WriteLine("O número digitado se encontra no intervalo de 25, 50");
+    Console.WriteLine("Digite três números: ");
 
+    int n1 = int.Parse(Console.ReadLine());
+    int n2 = int.Parse(Console.ReadLine());
+    int n3 = int.Parse(Console.ReadLine());
+
+    double resultado = Maior(n1, n2, n3);
+
+    Console.WriteLine("O maior número é = " + resultado);
 }
-else
+
+static int Maior(int a, int b, int c)
+{
+    int m;
+    if (a > b && a > c)
+    {
+        m = a;
+    }
+    else if (b > c)
+    {
+        m = b;
+    }
+    else { m = c; }
+    return m;
+}
+
+
