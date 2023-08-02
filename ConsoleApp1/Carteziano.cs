@@ -1,38 +1,27 @@
-﻿using System;
+﻿Console.WriteLine("Entre com o código do combustivel");
+int combustivel = int.Parse(Console.ReadLine());
+int alcool = 0;
+int gasolina = 0;
+int dissel = 0;
 
-namespace uri1115
+while (combustivel != 4)
 {
-    class Program
+    if (combustivel == 1)
     {
-        static void Main(string[] args)
-        {
-
-            string[] valores = Console.ReadLine().Split(' ');
-            int x = int.Parse(valores[0]);
-            int y = int.Parse(valores[1]);
-
-            while (x != 0 && y != 0)
-            {
-                if (x > 0 && y > 0)
-                {
-                    Console.WriteLine("primeiro");
-                }
-                else if (x < 0 && y > 0)
-                {
-                    Console.WriteLine("segundo");
-                }
-                else if (x < 0 && y < 0)
-                {
-                    Console.WriteLine("terceiro");
-                }
-                else
-                {
-                    Console.WriteLine("quarto");
-                }
-                valores = Console.ReadLine().Split(' ');
-                x = int.Parse(valores[0]);
-                y = int.Parse(valores[1]);
-            }
-        }
+        alcool = alcool + 1;
     }
+    else if (combustivel == 2)
+    {
+        gasolina = gasolina + 1;
+    }
+    else if (combustivel == 3)
+    {
+        dissel = dissel + 1;
+    }
+
+    combustivel = int.Parse(Console.ReadLine());
 }
+
+Console.WriteLine("Alcool: " + alcool);
+Console.WriteLine("Gasolina: " + gasolina);
+Console.WriteLine("Dissel: " + dissel);
