@@ -1,27 +1,11 @@
-﻿Console.WriteLine("Entre com o código do combustivel");
-int combustivel = int.Parse(Console.ReadLine());
-int alcool = 0;
-int gasolina = 0;
-int dissel = 0;
+﻿Console.Write("Quantos números inteiros você vai digitar? ");
+int N = int.Parse(Console.ReadLine());
 
-while (combustivel != 4)
+int soma = 0;
+for (int i = 1; i <= N; i++)
 {
-    if (combustivel == 1)
-    {
-        alcool = alcool + 1;
-    }
-    else if (combustivel == 2)
-    {
-        gasolina = gasolina + 1;
-    }
-    else if (combustivel == 3)
-    {
-        dissel = dissel + 1;
-    }
-
-    combustivel = int.Parse(Console.ReadLine());
+    Console.Write("Digite seu número: ");
+    int n1 = int.Parse(Console.ReadLine());
+    soma = soma + n1;
 }
-
-Console.WriteLine("Alcool: " + alcool);
-Console.WriteLine("Gasolina: " + gasolina);
-Console.WriteLine("Dissel: " + dissel);
+Console.WriteLine(soma);
