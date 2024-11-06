@@ -31,6 +31,6 @@ else:
 
 botao_entrar = pa.click(x=389, y=767, clicks=1, button='left')
 
-time.sleep(5)
+time.sleep(6)
 botao_jogar = pa.click(x=408, y=404, clicks=1, button='left')
 print('Deu certo!')
