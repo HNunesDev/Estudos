@@ -11,7 +11,7 @@ load_dotenv()
 lol = r'"C:\Riot Games\Riot Client\RiotClientServices.exe" --launch-product=league_of_legends --launch-patchline=live'
 os.system(lol)
 
-time.sleep(8)
+time.sleep(15)
 
 bt_login = pa.click (x=395, y=380, button='left', clicks=1)
 
@@ -31,6 +31,6 @@ else:
 
 botao_entrar = pa.click(x=389, y=767, clicks=1, button='left')
 
-time.sleep(7)
+time.sleep(8)
 botao_jogar = pa.click(x=408, y=404, clicks=1, button='left')
 print('Deu certo!')
