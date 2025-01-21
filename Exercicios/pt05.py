@@ -52,5 +52,5 @@ teste3= data_extenso('19/06/2018')
 def maior(lista_num : list[int]):
     return max(lista_num)
 
-lista = [0,1,2,3,4,5,6,7,8,9,10,99]
+lista= [0,1,2,3,4,5,6,7,8,9,10,99]
 print(f'O maior valor da {lista}, é {maior(lista)}')
