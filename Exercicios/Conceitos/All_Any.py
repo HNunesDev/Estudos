@@ -11,8 +11,8 @@ print(all(dados)) #Ja aqui nao
 print(all(letra for letra in 'aei2' if letra in 'abcdefghijklmnoopqrstuvwxyz')) #-> neste caso se tiver qualquer letra ele ja retorna true
 
 """
-Já o Any se qualquer um dos elementos do iteravel for T ele retornara True, porém iteravel vazio é retornado False
+Já o Any se qualquer um dos elementos do iteravel for T ele retornara True, porém iteravel VAZIO é retornado False
 """
 
 dados = [0,1,2,3,4]
-print(any(dados)) #
+print(any(dados)) #Como visto no exemplo anterior ele retorna T
