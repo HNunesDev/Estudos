@@ -12,7 +12,7 @@ chat = ChatGroq(model='llama-3.3-70b-versatile')
 loader = WebBaseLoader('https://pt.wikipedia.org/wiki/Sport_Club_Corinthians_Paulista')
 lista_documentos = loader.load()
 
-#Deve-se passar cada documento para uma string
+#Deve-se passar cada documento para uma string - Tive que limitar em 6000 pois é a quantidade de token por minuto que o Groq aceita
 documentos = "\n".join([doc.page_content[:6000] for doc in lista_documentos])
 # print(documentos)
 
@@ -22,8 +22,9 @@ template = ChatPromptTemplate.from_messages([
 ])
 pergunta_user = input('Qual a sua pergunta sobre o corinthans?')
 chain = template | chat
-resposta = chain.invoke({'repertorio': documentos, 'pergunta': pergunta_user})
 resposta2 = chain.invoke({'repertorio': documentos, 'pergunta': 'Se apresente, por favor?'})
+resposta = chain.invoke({'repertorio': documentos, 'pergunta': pergunta_user})
+
 
 print(resposta.content)
 print(resposta2.content)
