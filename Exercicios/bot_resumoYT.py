@@ -8,13 +8,13 @@ load_dotenv()
 os.environ['GROQ_API_KEY'] = os.getenv('api_key')
 chat = ChatGroq(model='llama-3.3-70b-versatile')
 
-url = 'https://www.youtube.com/watch?v=hsinKzMAqGA'
+url = 'https://www.youtube.com/watch?v=QZ613c_KF3M'
 loader = YoutubeLoader.from_youtube_url(url, language = 'pt')
 lista_documento = loader.load()
 
 documentos = "\n".join([doc.page_content[:6000] for doc in lista_documento])
 
-print(documentos)
+# print(documentos)
 
 template = ChatPromptTemplate([
     ('system', 'Voce é um assistente amigavel chamado Bmo que responde com base no {video}'),
