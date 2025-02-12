@@ -7,3 +7,10 @@ lista3 = ['a', 'b', 'c']
 exemplo = zip(lista1, lista2, lista3)
 
 print(list(exemplo))
+
+prova1 = [89, 90, 86]
+prova2 = [79, 80, 65]
+alunos = ['Pedro', 'Maria', 'Jose']
+
+final = {dado[0]: max(dado[1], dado[2]) for dado in zip(alunos, prova1, prova2)}
+print(final)
