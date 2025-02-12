@@ -8,7 +8,7 @@ load_dotenv()
 os.environ['GROQ_API_KEY'] = os.getenv('api_key')
 chat = ChatGroq(model='llama-3.3-70b-versatile')
 
-url = 'https://www.youtube.com/watch?v=QZ613c_KF3M'
+url = 'https://www.youtube.com/watch?v=7c5yfAdmIEQ'
 loader = YoutubeLoader.from_youtube_url(url, language = 'pt')
 lista_documento = loader.load()
 
