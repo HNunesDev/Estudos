@@ -9,7 +9,7 @@ load_dotenv()
 os.environ['GROQ_API_KEY'] = os.getenv('api_key')
 chat = ChatGroq(model='llama-3.3-70b-versatile')
 
-loader = WebBaseLoader('https://pt.wikipedia.org/wiki/Sport_Club_Corinthians_Paulista')
+loader = WebBaseLoader('https://blog.nubank.com.br/imposto-de-renda-ir/')
 lista_documentos = loader.load()
 
 #Deve-se passar cada documento para uma string - Tive que limitar em 6000 pois é a quantidade de token por minuto que o Groq aceita

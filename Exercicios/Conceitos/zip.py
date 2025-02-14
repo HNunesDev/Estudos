@@ -8,6 +8,7 @@ exemplo = zip(lista1, lista2, lista3)
 
 print(list(exemplo))
 
+#Exemplo 2
 prova1 = [89, 90, 86]
 prova2 = [79, 80, 65]
 alunos = ['Pedro', 'Maria', 'Jose']
