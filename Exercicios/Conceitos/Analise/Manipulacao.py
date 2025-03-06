@@ -10,6 +10,10 @@ with open('teste.txt', 'w') as arquivo:
 os.mkdir('diretorio') #ou caminho do diretorio e novo diretorio. neste caso é criado um relativo
 os.mkdir('c:\\user\\diretorio') #para criar absoluto
 
-os.makedirs('teste/teste/teste') #multi-diretorios 
+os.makedirs('teste/teste/teste') #Multi-diretorios 
 
-os.rename('nome antigo', 'nomeatual')
+os.rename('nome antigo', 'nomeatual') #Serve para renomear arquivos e diretórios
+
+os.remove('teste.txt') #Exclui arquivos em definitivo, nao existe uma especie de "lixeira".
+
+os.rmdir('diretorio') #Exclui diretorios mas apenas se estiverem vazios
