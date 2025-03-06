@@ -65,3 +65,4 @@ if os.path.exists(f'{arq2}.txt'):
     print(f'Existem {lenlinhas} linhas')
 else:
     print('Arquivo nao encontrado')
+os.remove('arq.txt')
