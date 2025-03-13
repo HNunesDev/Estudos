@@ -6,7 +6,7 @@ Objeto da programas orientada a objeto é mapear objetos do mundo real para mode
 
 Método = funcao - Unica diferença é que o metodo pertence a uma classe
 Construtor -> Método especial utilizado para criar objetos
-Objeto -> Instancia da classe
+
 """
 #Classe -------------------------------------------------------------------------------------------------
 """
@@ -26,6 +26,7 @@ print(type(lamp))
 """
 Atributos sao caracteristicas do objeto
 Em Python todo atributo de uma classe é público, caso queira delcarar o atributo como privado é necessario utilizar o __antes do nome do atributo, porém é possivel fazer acesso ao atributo mesmo assim
+Para acessa o atributo ou método privado deve ser feito da seguinte maneira: instancia._classe__atributo e o nome disso em python é Name Mangling
 Existem tres tipos de atributos: 
     -Atributos de Instancia
         -São atributos delcarados dentro do método do construtor
@@ -87,3 +88,18 @@ class Produto:
 pc = Produto("Computador", 3500)
 print(pc.total(2))
 
+#Objetos -------------------------------------------------------------------------------------------------
+"""
+São instancias da classe, sao os objetos criados a partir da classe
+Sao a forma que utilizamos as classes criadas
+"""
+#Exemplo
+ps4 = Produto("Video game", 3000) # Aqui estou instanciando o objeto (criando)
+
+#Encapsulamento -------------------------------------------------------------------------------------------------
+"""
+Encapsulamento pode ser resumido ao agrupamento de atributos e métodos
+Deve tornar os atributos privados para que nao acessem fora da classe e assim nao possam nem alterar nem visualizar os dados sensiveis
+Abstrcao é o ato de expor apenas os dados relevantes de uma classe escondendo os atributos e metodos privados do usuário
+
+"""
